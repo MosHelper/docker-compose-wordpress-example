@@ -1,12 +1,11 @@
 version: '3'
 services:
   wordpress:
-    image: wordpress:latest
-    restart: always
+    image: wordpress
     ports:
       - 8080:80
     volumes:
       - ./www:/var/www/html
+      - ./custom.php.ini:/usr/local/etc/php/conf.d/custom.php.ini
     deploy:
       replicas: 1
-  
