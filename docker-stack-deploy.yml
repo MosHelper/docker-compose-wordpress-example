@@ -7,3 +7,5 @@ services:
     volumes:
       - ./www:/var/www/html
       - ./custom.php.ini:/usr/local/etc/php/conf.d/custom.php.ini
+    deploy:
+      replicas: 1
